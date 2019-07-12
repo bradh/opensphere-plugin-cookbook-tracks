@@ -1,7 +1,7 @@
 {
-  "name": "opensphere-plugin-example",
+  "name": "opensphere-plugin-cookbook-tracks",
   "version": "1.0.0",
-  "description": "An OpenSphere external plugin example",
+  "description": "An OpenSphere external plugin cookbook example for tracks",
   "main": "index.js",
   "directories": {
     "src": "src",
@@ -18,16 +18,12 @@
     ],
     "gcc": {
       "entry_point": [
-        "goog:plugin.example.ExamplePlugin"
+        "goog:plugin.cookbook_tracks.TracksPlugin"
       ]
     }
   },
   "scripts": {
     "modernizr": "modernizr -c modernizr.config.json -u -d .build/modernizr.js",
-    "test:gcc": "os-compile .build/gcc-test-args.json",
-    "test:init": "npm run init && npm run modernizr && npm run compile:resolve && npm run test:gcc",
-    "test:run": "karma start --single-run",
-    "test": "npm run test:init && npm run test:run",
     "test:debug": "karma start --browsers Chrome --reporters dots",
     "init": "rimraf .build dist && mkdirp .build dist",
     "lint:css": "sass-lint -v -s scss -i 'scss/nolint/**/*.scss' 'scss/**/*.scss'",
@@ -45,7 +41,7 @@
     "gis",
     "geospatial"
   ],
-  "author": "William Wall <wwall@caci.com>",
+  "author": "Brad Hards <bradh@frogmouth.net>",
   "license": "Apache-2.0",
   "config": {
     "commitizen": {
@@ -68,14 +64,6 @@
     "eslint-plugin-opensphere": "^2.0.0",
     "google-closure-compiler": "^20190415.0.0",
     "husky": "^1.3.1",
-    "jasmine-core": "^2.5.2",
-    "karma": "^1.3.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-coverage": "^1.1.1",
-    "karma-firefox-launcher": "^1.1.0",
-    "karma-jasmine": "^0.1.0",
-    "karma-junit-reporter": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.2",
     "mkdirp": "^0.5.1",
     "modernizr": "~3.3.1",
     "node-sass": "^4.12.0",
@@ -83,7 +71,7 @@
     "opensphere-build-docs": "^1.0.0",
     "opensphere-build-resolver": "^5.2.0",
     "rimraf": "^2.5.4",
-    "sass-lint": "^1.12.1",
+    "sass-lint": "^1.13.1",
     "validate-commit-msg": "^2.8.2"
   },
   "dependencies": {
